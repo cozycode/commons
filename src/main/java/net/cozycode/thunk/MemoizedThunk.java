@@ -24,11 +24,11 @@ package net.cozycode.thunk;
  */
 public final class MemoizedThunk<T> implements Thunk<T> {
    private final T result;
-   
+
    public MemoizedThunk( T result ) {
       this.result = result;
    }
-   
+
    @Override
    public T get() {
       return result;

@@ -18,31 +18,31 @@ package net.cozycode.core;
 
 public interface Equality {
    public boolean areEqual( Object lhs, Object rhs );
-   
-   
+
+
    /** Uses reference equality (aka == equality) to compare the two values */
    public static final Equality REFERENCE_EQUALITY = new Equality() {
       @Override public boolean areEqual( Object lhs, Object rhs ) {
          return lhs == rhs;
       }
    };
-   
-   
+
+
    /** Uses Object.equals( Object ) to compare the two values */
    public static final Equality VALUE_EQUALITY = new Equality() {
       @Override public boolean areEqual( Object lhs, Object rhs ) {
          return lhs == null ? rhs == null : lhs.equals( rhs );
       }
    };
-   
-   
+
+
    /** regardless of which objects are passed in this comparison always returns true.  */
    public static final Equality ALWAYS_EQUAL = new Equality() {
       @Override public boolean areEqual( Object lhs, Object rhs ) {
          return true;
       }
    };
-   
+
 
    /** regardless of which objects are passed in this comparison always returns false.  */
    public static final Equality NEVER_EQUAL = new Equality() {

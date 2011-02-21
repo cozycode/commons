@@ -21,51 +21,51 @@ import net.cozycode.thunk.AbstractThunk;
 import net.cozycode.thunk.Thunk;
 
 public final class Tuple4<T1, T2, T3, T4> {
-	private final T1 first;
-	private final T2 second;
-	private final T3 third;
-	private final T4 fourth;
+   private final T1 first;
+   private final T2 second;
+   private final T3 third;
+   private final T4 fourth;
 
    private final Thunk<Integer> hashcode = new HashCode();
-	
-	public Tuple4(T1 v1, T2 v2, T3 v3, T4 v4 ) {
-		this.first = v1;
-		this.second = v2;
-		this.third = v3;
-		this.fourth = v4;
-	}
-	
-	public T1 getFirst() { return first; }	
-	public T2 getSecond() { return second; }
-	public T3 getThird() { return third; }
-	public T4 getFourth() { return fourth; }
 
-	@Override
-	@SuppressWarnings("rawtypes")
-	public boolean equals(Object obj) {
-		if( this == obj ) return true;
-		
-		if( obj instanceof Tuple4 ) {
-			Tuple4 that = (Tuple4)obj;
-			return Comparisons.areEqual( this.first, that.first ) 
-		    && Comparisons.areEqual( this.second, that.second )
-		    && Comparisons.areEqual( this.third, that.third )
-		    && Comparisons.areEqual( this.fourth, that.fourth );
-		}
-		
-		return false;
-	}
+   public Tuple4(T1 v1, T2 v2, T3 v3, T4 v4 ) {
+      this.first = v1;
+      this.second = v2;
+      this.third = v3;
+      this.fourth = v4;
+   }
 
-	@Override
-	public String toString() {
-		return "( "+ first +", "+ second +", "+ third +", "+ fourth +" )";
-	}
+   public T1 getFirst() { return first; }	
+   public T2 getSecond() { return second; }
+   public T3 getThird() { return third; }
+   public T4 getFourth() { return fourth; }
+
+   @Override
+   @SuppressWarnings("rawtypes")
+   public boolean equals(Object obj) {
+      if( this == obj ) return true;
+
+      if( obj instanceof Tuple4 ) {
+         Tuple4 that = (Tuple4)obj;
+         return Comparisons.areEqual( this.first, that.first ) 
+             && Comparisons.areEqual( this.second, that.second )
+             && Comparisons.areEqual( this.third, that.third )
+             && Comparisons.areEqual( this.fourth, that.fourth );
+      }
+
+      return false;
+   }
+
+   @Override
+   public String toString() {
+      return "( "+ first +", "+ second +", "+ third +", "+ fourth +" )";
+   }
 
    @Override
    public int hashCode() {
       return hashcode.get();
    }
-   
+
    private final class HashCode extends AbstractThunk<Integer> {
       @Override
       protected Integer compute() {

@@ -22,7 +22,7 @@ package net.cozycode.core;
  */
 public final class Comparisons {
    protected Comparisons() { /* Static Interface */ }
-   
+
    /** 
     * Compares to items for equality.  Returns true if they are both null.
     * 
@@ -33,7 +33,7 @@ public final class Comparisons {
    public static boolean areEqual( Object lhs, Object rhs ) {
       return lhs == rhs || ( lhs != null && lhs.equals( rhs )); 
    }
-   
+
 
    /** 
     * Compares to items for inequality.
@@ -45,7 +45,7 @@ public final class Comparisons {
    public static boolean areNotEqual( Object lhs, Object rhs ) {
       return lhs != rhs && (lhs == null || !lhs.equals( rhs ));
    }
-   
+
 
    /**
     * Checks that the string is either null or "".
@@ -56,7 +56,7 @@ public final class Comparisons {
    public static boolean isEmpty( String str ) {
       return str == null || "".equals( str );
    }
-   
+
    /**
     * Checks that the string is not null or "".
     * 
@@ -66,7 +66,7 @@ public final class Comparisons {
    public static boolean isNotEmpty( String str ) {
       return str != null && !"".equals( str );
    }
-   
+
    /**
     * Checks item is null, "" or not a string.
     * 
@@ -76,7 +76,7 @@ public final class Comparisons {
    public static boolean isEmptyString( Object item ) {
       return !( item instanceof String ) || Comparisons.isEmpty( (String)item );
    }
-   
+
 
    /**
     * Checks that item is a string and is not null or "".

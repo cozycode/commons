@@ -39,7 +39,7 @@ public class Reflecting {
     */
    public static <TYPE,ARG> Constructor<TYPE> getMatchingConstructor( Class<TYPE> clazz, ARG arg ) {
       HashSet<Class<?>> interfaces = new HashSet<Class<?>>();
-      
+
       // First, try each super type and collect available interfaces
       Class<?> iter = arg.getClass();
       while( iter != null ) {
@@ -51,7 +51,7 @@ public class Reflecting {
             iter = iter.getSuperclass();
          }
       }
-      
+
       // Next, try each interface
       for( Class<?> iface : interfaces ) {
          try {
@@ -61,10 +61,10 @@ public class Reflecting {
             /* noop */
          }
       }
-      
+
       return null;
    }
-   
+
    private static void addInterfaces( Set<Class<?>> set, Class<?> clazz ) {
       for( Class<?> iface : clazz.getInterfaces() ) {
          set.add( iface );

@@ -23,7 +23,7 @@ import net.cozycode.thunk.Thunk;
 public final class Tuple2<T1, T2> {
    private final T1 first;
    private final T2 second;
-   
+
    private final Thunk<Integer> hashcode = new HashCode();
 
    public Tuple2(T1 v1, T2 v2 ) {
@@ -42,7 +42,7 @@ public final class Tuple2<T1, T2> {
       if( obj instanceof Tuple2 ) {
          Tuple2 that = (Tuple2)obj;
          return Comparisons.areEqual( this.first, that.first ) 
-			    && Comparisons.areEqual( this.second, that.second );
+             && Comparisons.areEqual( this.second, that.second );
       }
 
       return false;
@@ -57,7 +57,7 @@ public final class Tuple2<T1, T2> {
    public int hashCode() {
       return hashcode.get();
    }
-   
+
    private final class HashCode extends AbstractThunk<Integer> {
       @Override
       protected Integer compute() {

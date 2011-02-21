@@ -36,7 +36,7 @@ public final class Printing {
       buffer.append( ']' );
       return buffer.toString();
    }
-   
+
    public static String arrayToString( int[] array ) {
       StringBuffer buffer = new StringBuffer( "[ " );
       for( int i : array ) {
@@ -46,7 +46,7 @@ public final class Printing {
       buffer.append( ']' );
       return buffer.toString();
    }
-   
+
    public static String arrayToString( long[] array ) {
       StringBuffer buffer = new StringBuffer( "[ " );
       for( long i : array ) {
@@ -56,7 +56,7 @@ public final class Printing {
       buffer.append( ']' );
       return buffer.toString();
    }
-   
+
    public static String arrayToString( float[] array ) {
       StringBuffer buffer = new StringBuffer( "[ " );
       for( float i : array ) {
@@ -66,7 +66,7 @@ public final class Printing {
       buffer.append( ']' );
       return buffer.toString();
    }
-   
+
    public static String arrayToString( double[] array ) {
       StringBuffer buffer = new StringBuffer( "[ " );
       for( double i : array ) {
@@ -76,12 +76,12 @@ public final class Printing {
       buffer.append( ']' );
       return buffer.toString();
    }
-   
+
    public static String printf( String format, Object... args ) {
       StringWriter stringWriter = new StringWriter();
       PrintWriter printer = new PrintWriter( stringWriter );
       printer.printf( format, args );
-      
+
       return stringWriter.toString(); 
    }
 }

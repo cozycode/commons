@@ -24,7 +24,7 @@ package net.cozycode.core;
  */
 public class Threading {
    private Threading() { /* static singleton */ }
-   
+
    /** 
     * Causes the currently running thread to sleep for the
     * specified number of milliseconds.
@@ -41,7 +41,7 @@ public class Threading {
       }
       return true;
    }
-   
+
    /**
     * Causes the currently running thread to sleep for the
     * specified number of milliseconds and nanoseconds.
@@ -59,7 +59,7 @@ public class Threading {
       }
       return true;
    }
-   
+
    /**
     * Calls join() on the specified thread.
     * 
@@ -75,7 +75,7 @@ public class Threading {
       }
       return true;
    }
-   
+
    /**
     * Calls join(millis) on the specified thread.
     * 
@@ -92,7 +92,7 @@ public class Threading {
       }
       return true;
    }
-   
+
    /**
     * Calls join(millis,nanos) on the specified thread.
     * 

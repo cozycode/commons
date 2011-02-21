@@ -25,9 +25,9 @@ package net.cozycode.core;
  * @author Pete Poulos
  */
 public interface IDisposable {
-	/**
-	 * This method is called when the object is being disposed. 
-	 * Your cleanup code goes here.
-	 */
-	void dispose();
+   /**
+    * This method is called when the object is being disposed. 
+    * Your cleanup code goes here.
+    */
+   void dispose();
 }

@@ -23,7 +23,7 @@ package net.cozycode.thunk;
  */
 public final class Thunkify<T> implements Thunk<T> {
    private volatile Getter<T> getter;
-   
+
    public Thunkify( final Getter<T> compute ) {
       this.getter = new SynchronizedThunk<T>() {
          @Override
@@ -34,7 +34,7 @@ public final class Thunkify<T> implements Thunk<T> {
          }
       };
    }
-   
+
    @Override
    public T get() {
       return getter.get();
